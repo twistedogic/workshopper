@@ -1,0 +1,18 @@
+include:
+  - "./import.yaml"
+
+exercise1:
+  stage: prereq
+  content: "# one"
+  variables:
+    SOME_KEY: "value"
+  before_script:
+    - echo ${SOME_KEY}
+  script:
+    - echo ${SOME_KEY}
+
+exercise2:
+  stage: content 
+  content: "# two"
+  script:
+    - echo "ok"
